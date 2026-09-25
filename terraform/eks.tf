@@ -66,6 +66,7 @@ module "eks" {
   addons = {
     vpc-cni = {
       addon_version = "v1.22.4-eksbuild.3"
+      before_compute = true
     }
     kube-proxy = {
       addon_version = "v1.36.0-eksbuild.25"
