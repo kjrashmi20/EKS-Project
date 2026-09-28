@@ -130,30 +130,30 @@ module "vpc_endpoints" {
     }
 
     ssm = {
-      service_name       = "com.amazonaws.ap-south-1.ssm"
-      service_type       = "Interface"
-      subnet_ids         = module.vpc.private_subnets
+      service_name        = "com.amazonaws.ap-south-1.ssm"
+      service_type        = "Interface"
+      subnet_ids          = module.vpc.private_subnets
       private_dns_enabled = true
     }
 
     ssmmessages = {
-      service_name       = "com.amazonaws.ap-south-1.ssmmessages"
-      service_type       = "Interface"
-      subnet_ids         = module.vpc.private_subnets
+      service_name        = "com.amazonaws.ap-south-1.ssmmessages"
+      service_type        = "Interface"
+      subnet_ids          = module.vpc.private_subnets
       private_dns_enabled = true
     }
 
     ec2messages = {
-      service_name       = "com.amazonaws.ap-south-1.ec2messages"
-      service_type       = "Interface"
-      subnet_ids         = module.vpc.private_subnets
+      service_name        = "com.amazonaws.ap-south-1.ec2messages"
+      service_type        = "Interface"
+      subnet_ids          = module.vpc.private_subnets
       private_dns_enabled = true
     }
 
     eks_auth = {
-      service_name       = "com.amazonaws.ap-south-1.eks-auth"
-      service_type       = "Interface"
-      subnet_ids         = module.vpc.private_subnets
+      service_name        = "com.amazonaws.ap-south-1.eks-auth"
+      service_type        = "Interface"
+      subnet_ids          = module.vpc.private_subnets
       private_dns_enabled = true
     }
 

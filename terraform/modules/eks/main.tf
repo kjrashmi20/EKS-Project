@@ -19,9 +19,9 @@ module "eks" {
 
 
 
-  vpc_id = module.vpc.vpc_id
+  vpc_id = var.vpc_id
 
-  subnet_ids = module.vpc.private_subnets
+  subnet_ids = var.private_subnet_ids
 
 
 
@@ -45,7 +45,7 @@ module "eks" {
 
 
 
-      subnet_ids = module.vpc.private_subnets
+      subnet_ids = var.private_subnet_ids
 
     }
 
@@ -65,7 +65,7 @@ module "eks" {
 
   addons = {
     vpc-cni = {
-      addon_version = "v1.22.4-eksbuild.3"
+      addon_version  = "v1.22.4-eksbuild.3"
       before_compute = true
     }
     kube-proxy = {
